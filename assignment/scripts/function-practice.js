@@ -118,7 +118,19 @@ console.log('sum of 10, 10 and the string 10 should be 2010: '+ sumAll(arraySome
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+function returnNewArrayOfPositiveNumbersGreaterThanZero(inputArray){
+  let arraylength = inputArray.length;
+  let outputArray = [];
+  for(let i =0;i<arraylength;i++){
+    if(inputArray[i]>0){
+      outputArray.push(inputArray[i]);
+    }
+  }
+  return outputArray;
+}
+let arrayOfSomePositiveNumbers = [10,13,-5,'hello',5];
+console.log('should return 10,13,5  '+returnNewArrayOfPositiveNumbersGreaterThanZero(arrayOfSomePositiveNumbers));
+console.log('did old array change, should be [10,13,-5,\'hello\',5]    '+ arrayOfSomePositiveNumbers);
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
