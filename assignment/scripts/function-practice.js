@@ -136,3 +136,13 @@ console.log('did old array change, should be [10,13,-5,\'hello\',5]    '+ arrayO
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+// from edabit, problem Convert Age to Days.
+// create a function that takes the age in years and returns the age in days. Example:
+// calcAge(65) to 23725, calcAge(0) to 0, calcAge(20) to 7300. Notes
+// use 365 days as the lenght of a year for this challenge. Ignore leap years and days between last birthday and now. Expect only positive integer inputs.
+function calcAgeFromYearsToDays(ageInYears){
+  return ageInYears*365;
+}
+console.log(' 65 years should be 23725 days and is : '+ calcAgeFromYearsToDays(65));
+console.log(' 0 years should be 0 days and is : '+ calcAgeFromYearsToDays(0));
+console.log(' 20 years should be 7300 days and is : '+ calcAgeFromYearsToDays(20));
