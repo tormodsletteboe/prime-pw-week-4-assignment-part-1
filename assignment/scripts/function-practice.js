@@ -88,17 +88,32 @@ console.log('passing in non array: should return false: '+find('hello',nonArray)
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if(letter==string[0]){
+    return true;
+  }
+  return false;
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll(arrayOfValuesToSum ) {
   let sum = 0
   // TODO: loop to add items
+  for(let i =0; i<arrayOfValuesToSum.length;i++){
+    sum+=arrayOfValuesToSum[i];
+  }
   return sum;
 }
+let arraySomeNumbers = [10,10,10];
+console.log('sum of 10 10 and 10 should be 30: '+ sumAll(arraySomeNumbers));
+arraySomeNumbers = [-10,-10,-10];
+console.log('sum of -10 -10 and -10 should be -30: '+ sumAll(arraySomeNumbers));
+arraySomeNumbers = [];
+console.log('sum of [] should be 0: '+ sumAll(arraySomeNumbers));
+arraySomeNumbers = [10,10,'10'];
+console.log('sum of 10, 10 and the string 10 should be 2010: '+ sumAll(arraySomeNumbers));
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
